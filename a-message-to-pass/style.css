@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html{
+  display: grid;
+  place-items: center;
+  background-color: #161623;
+  height: 100%;
+  color: #000;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  backdrop-filter:blur(15px);
+  padding: 50px 60px;
+  background:linear-gradient(to right, #D4D3DD, #EFEFBB);
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: 10px 5px 30px rgba(255, 255, 255, .1);
+  border-radius: 5px;
+  z-index: 10000;
+}
+.container::after{
+  content: '';
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  z-index: -1;
+  top: 90px;
+  left: 20px;
+  background:rgba(255, 255, 255, .1);
+  box-shadow: 10px 5px 30px rgba(255, 255, 255, 1);
+  border-radius: 5px;
+}
+h4{
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+form input{
+  margin: 10px 0;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .5);
+  background-color: rgba(255, 255, 255, .2);
+}
+form input.box{
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+}
+form input.button{
+  font-size: 1rem;
+  padding: 8px 20px;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 4px;
+  transition: .3s;
+  color: #000;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+form input.button:hover{
+  background-color:rgba(255, 255, 255, .7);
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, .5);
+}
+h5{
+  background-color: #FFD4CD;
+  color: #161623;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+.feedback{
+  display: none;
+}
+.show{
+  display: block;
+}
+.message-content{
+  color:#5b921b
+}
